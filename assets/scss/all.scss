@@ -1,0 +1,20 @@
+/* 引入字體 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+@import "bootstrap/scss/functions";
+@import './utils/variables';
+@import "bootstrap/scss/bootstrap";
+@import "./utils/_utils";
+
+@import "bootstrap/scss/utilities/api";
+@import "./base/_base";
+
+@import "./components/button";
+
+@import './layout/header';
+@import './layout/footer';
+
+@import './pages/index.scss';
+
+@import './pages/tool.scss';
+@import './pages/detail.scss';

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+  href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.min.css"
+  rel="stylesheet"
+/>
+
+    <title>index</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main>
+      <section 
+        class="mx-5 mt-4 mb-5 rounded-5 m-lg-10 rounded-lg-6 overflow-hidden">
+        
+      <div class="row flex-column flex-lg-row g-1" id="image-gallery">
+        <div class="col">
+           <a
+            href="../assets/images/detail-Image.png"
+            data-pswp-width="1200"
+            data-pswp-height="800"
+            target="_blank"
+        >          
+           <img src="/assets/images/detail-Image.png" alt="" class="w-100" />
+        </a>
+        </div>
+  
+        <div class="col">
+          <div class="row row-cols-lg-2 g-1">
+            <div class="col">
+            <a
+            href="../assets/images/detail-Image-1.png"
+            data-pswp-width="1200"
+            data-pswp-height="800"
+            target="_blank"
+        >          
+            <img src="/assets/images/detail-Image-1.png" alt="" class="w-100" />
+            </a>
+            </div>
+            
+            <div class="col">
+            <a
+            href="../assets/images/detail-Image-2.png"
+            data-pswp-width="1200"
+            data-pswp-height="800"
+            target="_blank"
+        >          
+            <img src="/assets/images/detail-Image-2.png" alt="" class="w-100" />
+            </a>
+            </div>
+                     
+            <div class="col">
+            <a
+            href="../assets/images/detail-Image-3.png"
+            data-pswp-width="1200"
+            data-pswp-height="800"
+            target="_blank"
+        >          
+            <img src="/assets/images/detail-Image-3.png" alt="" class="w-100" />
+            </a>
+            </div>
+            
+            <div class="col">
+              <div class="position-relative">
+               <a
+                href="../assets/images/detail-Image-4.png"
+                data-pswp-width="1200"
+                data-pswp-height="800"
+                target="_blank"
+        >          
+                <img src="/assets/images/detail-Image-4.png"
+                  alt="" class="w-100 d-block"
+                />  
+                
+                <!-- 手機版遮罩 -->
+                <div
+                  class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 d-lg-none d-flex justify-content-center align-items-center"
+                ><span class="material-symbols-outlined text-white fs-3"> more_horiz </span>
+              </div>
+              </a> 
+                
+              <!--電腦版按鈕-->
+              <div class="position-absolute more-image-btn d-none d-lg-block">
+
+              <a
+              href="../assets/images/detail-Image-4.png"
+              data-pswp-width="1200"
+              data-pswp-height="800"
+              target="_blank"
+              class="btn btn-neutral-100 text-primary-dark fw-bold btn-standard rounded-3"
+          >          
+              查看更多照片
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+              </div>
+              </div>
+            </div> 
+        </div>
+      </div>
+      </section>
+      
+      <p>範例</p>
+      <div class="d-flex gap-1" id="image-gallery">
+        <a
+          href="../assets/images/search-house1-1.png"
+          data-pswp-width="1200"
+          data-pswp-height="800"
+          target="_blank"
+        >
+          <img src="/assets/images/search-house1-1.png" alt="" />
+        </a>
+        <a
+          href="../assets/images/search-house2-1.png"
+          data-pswp-width="1200"
+          data-pswp-height="800"
+          target="_blank"
+        >
+          <img src="/assets/images/search-house2-1.png" alt="" />
+        </a>
+      </div>
+    </main>
+
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

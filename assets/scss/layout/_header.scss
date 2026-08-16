@@ -1,0 +1,155 @@
+.logo {
+  width: 116.5px;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 233px;
+  }
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  width: 24px;
+  height: 18px;
+  background-image: none;
+  border-top: 2px solid $primary-dark;
+  border-bottom: 2px solid $primary-dark;
+  transition: all 0.3s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 24px;
+    height: 2px;
+    background-color: $primary-dark;
+    transition: transform 0.3s ease;
+  }
+}
+
+/* 選單打開時 */
+.navbar-toggler[aria-expanded="true"] {
+  .navbar-toggler-icon {
+    border-color: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary;
+  color: #fff;
+  border-radius: 50%;
+
+  .fill {
+    font-variation-settings: 'FILL' 1;
+    font-size: 30px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    margin-top: 28px;
+    margin-bottom: -132px;
+  }
+}
+
+// 1. 定義一個滾動時間軸 (scroll-timeline-name 和 scroll-timeline-axis)
+html {
+  scroll-timeline-name: --my-scroll-progress; /* 給這個時間軸一個名字 */
+  scroll-timeline-axis: block; /* 監聽垂直滾動（Y軸） */
+}
+// 2. 將動畫與滾動時間軸綁定 (animation-timeline)
+.navbar {
+  animation: my-animation forwards; /* 你的 @keyframes 動畫 */
+  animation-timeline: --my-scroll-progress; /* 將動畫綁定到先前定義的滾動時間軸 */
+  /* 3. 定義動畫的觸發範圍 */
+  animation-range: 0px 300px; /* 動畫從 0px 滾動到 300px 後完成 */
+}
+@keyframes my-animation {
+  from {
+    /* 0% 狀態 */
+    background-color: transparent;
+  }
+  to {
+    /* 100% 狀態 */
+    background-color: $neutral-100;
+  }
+}
+
+@keyframes navbar-brand-bg-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand::before {
+    content:'';
+    position: absolute;
+    z-index: -1;
+    top: -56px;
+    left: 0;
+    width: 360px;
+    height: 172%;
+    background-color: $neutral-100;
+    border-bottom-right-radius: 15%;
+
+    animation: navbar-brand-bg-animation forwards; /* 你的 @keyframes 動畫 */
+    animation-timeline: --my-scroll-progress; /* 將動畫綁定到先前定義的滾動時間軸 */
+  /* 3. 定義動畫的觸發範圍 */
+  }
+  .navbar {
+    &::before {
+      content:'';
+      position: absolute;
+      width: 40%;
+      height: 40%;
+      left: 40px;
+      bottom: -60px;
+      border-top-left-radius: 35%;
+
+      animation: navbar-brand-bg-animation forwards; /* 你的 @keyframes 動畫 */
+      animation-timeline: --my-scroll-progress; /* 將動畫綁定到先前定義的滾動時間軸 */
+  /* 3. 定義動畫的觸發範圍 */
+
+    }
+  }
+  .banner {
+  border-top-left-radius: 24px;
+  overflow: hidden;
+  }
+
+  .navbar::after { 
+      content:'';
+      position: absolute;
+      width: 40%;
+      height: 40%;
+      left: 360px;
+      top: -16px;
+      border-top-left-radius: 35%;
+
+      animation: navbar-brand-bg-animation forwards; /* 你的 @keyframes 動畫 */
+      animation-timeline: --my-scroll-progress; /* 將動畫綁定到先前定義的滾動時間軸 */
+  /* 3. 定義動畫的觸發範圍 */
+
+    }
+
+}
