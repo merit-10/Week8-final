@@ -3,3 +3,400 @@
     bottom: 35px;
 
 }
+
+.property-detail {
+  color: #405338;
+}
+
+.property-card {
+  position: relative;
+  padding: 32px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 6%);
+}
+
+.property-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.property-address {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 40px;
+
+}
+
+.property-specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  background: #fff5eb;
+  border-radius: 18px;
+}
+
+.property-spec {
+  padding: 16px;
+  text-align: center;
+
+  &:not(:last-child) {
+    border-right: 1px solid #eadfd4;
+  }
+
+  strong {
+    display: block;
+    margin-top: 8px;
+    color: #171717;
+    font-size: 18px;
+  }
+}
+
+.property-spec-label {
+  color: #627457;
+  font-size: 13px;
+}
+
+.property-subtitle {
+  font-size: 25px;
+  font-weight: 700;
+  padding-bottom: 60px;
+
+}
+
+.property-description {
+  overflow: hidden;
+  padding-bottom: 40px;
+
+  p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+.booking-card {
+  position: sticky;
+  top: 24px;
+}
+
+.property-price {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 40px;
+  gap: 6px;
+
+  strong {
+    margin-left: auto;
+    font-size: 32px;
+  }
+}
+
+.property-currency,
+.property-unit {
+  font-weight: 700;
+}
+
+.property-price-note,
+.booking-note {
+  color: #666;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.property-booking-btn {
+  color: #fff;
+  background: #687f5c;
+
+  &:hover {
+    color: #fff;
+    background: #526848;
+  }
+}
+
+.property-calculator-btn {
+  color: #405338;
+  border: 1px solid #687f5c;
+
+  &:hover {
+    color: #fff;
+    background: #687f5c;
+  }
+}
+
+@media (max-width: 991px) {
+  .property-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .booking-card {
+    position: static;
+  }
+
+  .property-specs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .property-title {
+    font-size: 26px;
+  }
+}
+
+
+.property-description-content p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.property-feature-title {
+  margin-bottom: 24px;
+  color: #405338;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.property-feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.property-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: #687f5c;
+  background-color: #f7f7f7;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  color: white;
+  background-color: #ff914d;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  .property-feature-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .property-feature-list li {
+    font-size: 12px;
+  }
+}
+
+.house-detail-section {
+  margin-top: 40px;
+}
+
+.house-detail {
+  margin-bottom: 24px;
+  color: #405338;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.house-detail-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 12px 20px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid white;
+}
+
+.detail-item:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.detail-item:nth-child(even) {
+  margin-left: 20px;
+}
+
+.detail-item:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.detail-item span {
+  color: #666;
+}
+
+.detail-item strong {
+  color: #222;
+  font-weight: normal;
+}
+
+@media (max-width: 576px) {
+  .house-detail-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 8px 12px;
+    border-radius: 16px;
+  }
+
+  .detail-item {
+    margin: 0;
+    padding: 14px 0;
+    border-bottom: 1px solid white;
+  }
+
+  .detail-item:nth-child(odd),
+  .detail-item:nth-child(even) {
+    margin: 0;
+  }
+
+  .detail-item:nth-last-child(-n + 2) {
+    border-bottom: 1px solid white;
+  }
+
+  .detail-item:last-child {
+    border-bottom: 0;
+  }
+
+  .detail-item span,
+  .detail-item strong {
+    font-size: 13px;
+  }
+}
+
+.geo-detail-section {
+  margin-top: 48px;
+}
+
+.geo-detail {
+  margin-bottom: 24px;
+  color: #405338;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.geo-map {
+  display: block;
+  width: 100%;
+  max-width: 752px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.life-section {
+  margin-top: 48px;
+}
+
+.life-detail {
+  margin-bottom: 24px;
+  color: #405338;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.life-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.life-list li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+
+.life-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #ff914d;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.life-list h4 {
+  margin-bottom: 4px;
+  color: #405338;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.life-list p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+@media (max-width: 576px) {
+  .life-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.similar-recommend {
+  margin-top: 80px;
+}
+
+.similar-title {
+  margin-bottom: 24px;
+  color: #405338;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.similar-list {
+  display: flex;
+  gap: 24px;
+}
+
+.similar-list .house-item {
+  width: calc((100% - 48px) / 3);
+}
+
+@media (max-width: 576px) {
+  .similar-list {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .similar-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .similar-list .house-item {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+  }
+}
+
+.property-description p:not(:last-child) {
+  margin-bottom: 16px;
+}

@@ -11,14 +11,76 @@
     <%- include('./layout/header'); -%>
 
     <main>
-        <section class="banner rounded-5 m-lg-10 rounded-lg-6">
+        <section class="banner position-relative rounded-5 m-lg-10 rounded-lg-6">
           <div class="pt-10 ps-lg-10 pt-lg-20 banner-text-bg">
             <div class="banner-text">
               <h1 class="fw-bold fs-1-m fs-lg-1 text-primary-dark mb-6 mb-lg-7">找到您的夢想家園</h1>
               <p class="fw-bold fs-5-m fs-lg-5">上千筆精選房源、專業預約看房服務、即時房貸試算、讓您輕鬆找到理想住宅</p>
             </div>
             </div>
+
+          <div class="search-box">
+          <div class="row g-3 align-items-end">
+            <div class="col-lg">
+              <label class="mb-2">地區</label>
+              <select class="form-select">
+                <option>請選擇地區</option>
+                <option value="taipei">台北市</option>
+                <option value="new-taipei">新北市</option>
+                <option value="taoyuan">桃園市</option>
+                <option value="hsinchu">新竹市</option>
+              </select>
+            </div>
+
+            <div class="col-lg">
+              <label class="mb-2">房型</label>
+              <select class="form-select">
+                <option>請選擇房型</option>
+                <option value="villa">透天</option>
+                <option value="apartment">公寓</option>
+                <option value="mansion">華廈</option>
+                <option value="suite">套房</option>
+
+              </select>
+            </div>
+
+            <div class="col-lg">
+              <label class="mb-2">房間數</label>
+              <select class="form-select">
+                <option>請選擇房間數</option>
+                <option value="1">1 間</option>
+                <option value="2">2 間</option>
+                <option value="3">3 間</option>
+                <option value="4">4 間</option>
+              </select>
+            </div>
+
+            <div class="col-lg">
+              <label class="mb-2">價格</label>
+              <select class="form-select">
+                <option>請選擇價格區間</option>
+                <option value="under-500">500 萬以下</option>
+                <option value="500-1000">500～1,000 萬</option>
+                <option value="1000-2000">1,000～2,000 萬</option>
+                <option value="over-2000">2,000 萬以上</option>
+
+              </select>
+            </div>
+
+            <div class="col-lg-auto">
+              <button class="btn btn-primary px-5">
+                搜尋房源
+                <span class="material-symbols-outlined fs-6">
+                  search
+                </span>
+              </button>
+            </div>
+          </div>
+          </div>  
         </section>
+          
+        
+        
 
         <section class="container py-11 py-lg-18 choose-item">
           <h2 class="fw-bold fs-2-m fs-lg-2 text-primary-dark mb-4 mb-lg-5">為什麼選擇我們</h2>
@@ -65,30 +127,204 @@
           </div>
         </section>
 
-        <section class="featured-banner rounded-5 m-lg-10 rounded-lg-6" 
-        style="background-image: url('../assets/images/index-img_house.png');"
-        >
-        <div class="banner-overlay pt-10 ps-6 ps-lg-10 pt-lg-20">
+        <section class="container py-11 py-lg-18">
+  <div class="row g-4">
+    <!-- 左邊-精選房源 -->
+    <div class="col-lg-4">
+      <div
+        class="featured-banner rounded-5 h-100"
+        style="background-image: url('/assets/images/index-img_house.png')"
+      >
+        <div class="banner-overlay p-6 p-lg-10">
+          <!-- 左上文字 -->
           <div class="banner-text text-white">
-            <h1 class="fw-bold fs-1-m fs-lg-1 mb-6 mb-lg-7">
+            <h2 class="fw-bold mb-4">
               精選房源
-            </h1>
-            <p class="fw-bold fs-5-m fs-lg-5 mb-6">
+            </h2>
+
+            <p class="fw-bold mb-6">
               為您精心挑選的優質物件
             </p>
-            <button
-              type="button"
-              class="btn btn-primary text-white fw-bold btn-standard px-6"
+
+            <a
+              href="#"
+              class="btn btn-light text-primary-dark fw-bold px-6"
             >
               查看更多房源
               <span class="ms-2">→</span>
-            </button>
+            </a>
           </div>
-           <div class="banner-count">
+
+          <!-- 右下數字 -->
+          <div class="banner-count text-white">
             <span>精美物件</span>
             <strong>999+</strong>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+          <!-- 右邊卡片 -->
+          <div class="col-lg-8 overflow-hidden">
+            <div class="house-list" id="houseSlider">
+          <!-- 第一張卡片 -->
+          <div class="house-item">
+            <div class="house-card">
+              <div class="position-relative">
+                <img
+                  src="/assets/images/index-img_house1.png"
+                  alt="景觀別墅"
+                  class="house-img"
+                />
+
+                <span class="house-tag">別墅</span>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <h3 class="house-title">景觀別墅</h3>
+
+                <p class="house-location">
+                  <span class="material-symbols-outlined">location_on</span>
+                  台北市信義區
+                </p>
+              </div>
+
+              <div class="house-price">
+                <span>NT$</span>
+                <strong>1,500</strong>
+                <span>萬</span>
+              </div>
+
+              <div class="d-flex gap-2">
+                <span class="house-info">
+                  <span class="material-symbols-outlined">bed</span>
+                  3
+                </span>
+
+                <span class="house-info">
+                  <span class="material-symbols-outlined">bathtub</span>
+                  2
+                </span>
+
+                <span class="house-info">
+                  <span class="material-symbols-outlined">crop_square</span>
+                  45坪
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="house-item">
+            <div class="house-card">
+              <div class="position-relative">
+                <img
+                  src="/assets/images/index-img_house2.png"
+                  alt="現代豪華大樓"
+                  class="house-img"
+                />
+
+                <span class="house-tag">豪宅</span>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <h3 class="house-title">現代豪華大樓</h3>
+
+                <p class="house-location">
+                  <span class="material-symbols-outlined">location_on</span>
+                  台北市信義區
+                </p>
+              </div>
+
+              <div class="house-price">
+                <span>NT$</span>
+                <strong>1,200</strong>
+                <span>萬</span>
+              </div>
+
+              <div class="d-flex gap-2">
+                <span class="house-info">
+                  <span class="material-symbols-outlined">bed</span>
+                  3
+                </span>
+
+                <span class="house-info">
+                  <span class="material-symbols-outlined">bathtub</span>
+                  2
+                </span>
+
+                <span class="house-info">
+                  <span class="material-symbols-outlined">crop_square</span>
+                  120坪
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="house-item">
+            <div class="house-card">
+              <div class="position-relative">
+                <img
+                  src="/assets/images/index-img_house3.png"
+                  alt="溫馨透天"
+                  class="house-img"
+                />
+
+                <span class="house-tag">透天</span>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <h3 class="house-title">溫馨透天</h3>
+
+                <p class="house-location">
+                  <span class="material-symbols-outlined">location_on</span>
+                  台北市信義區
+                </p>
+              </div>
+
+              <div class="house-price">
+                <span>NT$</span>
+                <strong>2,000</strong>
+                <span>萬</span>
+              </div>
+
+              <div class="d-flex gap-2">
+                <span class="house-info">
+                  <span class="material-symbols-outlined">bed</span>
+                  3
+                </span>
+
+                <span class="house-info">
+                  <span class="material-symbols-outlined">bathtub</span>
+                  3
+                </span>
+
+                <span class="house-info">
+                  <span class="material-symbols-outlined">crop_square</span>
+                  60坪
+                </span>
+              </div>
+                 </div>
+          </div>
+        </div>
+        <div class="house-control">
+          <div class="house-line"></div>
+
+          <div class="d-flex gap-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="housePrev"
+            >←</button>
+             <button
+              type="button"
+              class="btn btn-primary"
+              id="houseNext"
+            >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
       <section class="container py-11 py-lg-18">
       <div class="row gy-10 gy-lg-7 align-items-center">
@@ -105,34 +341,51 @@
             <h2 class="fw-bold fs-2-m fs-lg-2 text-primary-dark mb-4 mb-lg-6">
              房貸試算工具
             </h2>
-            <p class="mb-8">
+            <p class="calculator-description">
             輕鬆計算您的月付金額，提前規劃購屋預算，讓買房更有信心
             </p>
 
             <!-- 功能介紹 -->
-            <div class="mb-6">
-              <p class="fw-bold fs-6-m fs-lg-6 text-primary-dark mb-1 mb-lg-2">
-                多元試算方案
+             <div class="row row-cols-3 g-4 mb-8">
+            <!-- 第一個 -->
+            <div class="col">
+              <div class="tool-icon">
+                <span class="material-symbols-outlined">paid</span>
+              </div>
+
+              <h3 class="tool-title">多元試算方案</h3>
+
+              <p class="tool-text">
+                本息攤還、寬限期等多種還款方式比較
               </p>
-              <p class="mb-0">本息攤還、寬限期等多種還款方式比較</p>
             </div>
 
-            <div class="mb-6">
-              <p class="fw-bold fs-6-m fs-lg-6 text-primary-dark mb-1 mb-lg-2">
-                即時利率資訊</p>
-              <p class="mb-0">
+            <!-- 第二個 -->
+            <div class="col">
+              <div class="tool-icon">
+                <span class="material-symbols-outlined">trending_up</span>
+              </div>
+
+              <h3 class="tool-title">即時利率資訊</h3>
+
+              <p class="tool-text">
                 整合各大銀行最新貸款利率
               </p>
             </div>
 
-            <div class="mb-8">
-              <p class="fw-bold fs-6-m fs-lg-6 text-primary-dark mb-1 mb-lg-2"
-              >詳細還款計畫
-              </p>
-              <p class="mb-0">
+            <!-- 第三個 -->
+            <div class="col">
+              <div class="tool-icon">
+                <span class="material-symbols-outlined">calendar_month</span>
+              </div>
+
+              <h3 class="tool-title">詳細還款計畫</h3>
+
+              <p class="tool-text">
                 完整時間表，掌握每期本金與利息
               </p>
             </div>
+          </div>
 
             <!-- 按鈕 -->
             <button
