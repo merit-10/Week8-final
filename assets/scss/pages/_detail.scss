@@ -379,7 +379,7 @@
   width: calc((100% - 48px) / 3);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .similar-list {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
