@@ -400,3 +400,23 @@
 .property-description p:not(:last-child) {
   margin-bottom: 16px;
 }
+
+@media (max-width: 576px) {
+  .similar-recommend {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .similar-list {
+    gap: 16px;
+  }
+
+  .similar-list .house-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+}
