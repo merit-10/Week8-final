@@ -1,9 +1,11 @@
 .banner {
+  position: relative;
   min-height: 100vh;
   background-image: url("/assets/images/index-m_Hero Image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  bottom: 40px;
 }
 
 @media (min-width: 992px) {
@@ -30,7 +32,7 @@
     background-image: url("/assets/images/bg.png");
     background-size: 964px 766px;
     background-position: -104px bottom;
-    padding-bottom: 168px;
+    padding: 150px 40px 168px;
   }
 
 .banner-text {
@@ -282,11 +284,11 @@
   .search-box {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 16px;
     width: 68%;
     padding: 16px 20px;
     background-color: white;
-    border-radius: 0 28px 0 0;
+    border-radius: 28px 0 0;
 
     .row {
       flex-wrap: nowrap;
@@ -477,4 +479,33 @@
 
 .calculator-description {
   margin-bottom: 48px;
+}
+
+@media (max-width: 991px) {
+  .banner-text-bg {
+    padding-top: 60px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
+.select-icon {
+  position: relative;
+
+  .material-symbols-outlined {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    z-index: 2;
+
+    color: #6d8062;
+    font-size: 18px;
+    pointer-events: none;
+
+    transform: translateY(-50%);
+  }
+
+  .form-select {
+    padding-left: 38px;
+  }
 }
